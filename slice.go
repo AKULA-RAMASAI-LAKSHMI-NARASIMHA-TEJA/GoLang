@@ -28,4 +28,18 @@ func main() {
 	fmt.Println(isSorted) // false
 	sort.Ints(slice)
 	fmt.Println(slice) // [1 2 2 2 3 3 4 5]
+
+	// just checking random stuff
+	scores := make([]int, 4)
+	scores[0] = 7
+	scores[1] = 4
+	scores[2] = 8
+	scores[3] = 6
+	fmt.Println("scores address: ", &scores[0])
+	ptr := &scores[0]
+
+	scores = append(scores, 5, 1, 2)
+	fmt.Println("scores address after appendinng elements: ", &scores[0])
+	*ptr *= 2
+	fmt.Println(*ptr, scores[0])
 }
