@@ -19,7 +19,7 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
-	fmt.Println(string(data))
+	fmt.Println(string(data)) // html
 
 	defer response.Body.Close() // best practice
 }
